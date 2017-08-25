@@ -33,10 +33,10 @@ function addStaticAssets(xboxX, xboxY, pupilsX, pupilsY) {
 function moveXboxAndEyesMobile(e) {
   console.log('xbox x: ', e.touches[0].clientX - 140);
   console.log('xbox y: ', e.touches[0].clientY - 100);
-  xboxX = e.touches[0].clientX - 140;
+  xboxX = e.touches[0].clientX - 123;
   xboxY = e.touches[0].clientY - 100;
 
-  if (xboxX >= 136) {
+  if (xboxX >= 112) {
     pupilsX = 3.5;
   } else if (xboxX <= -5) {
     pupilsX = -2.4;
@@ -53,29 +53,29 @@ function moveXboxAndEyesMobile(e) {
   }
 }
 
-function moveXboxAndEyesDesktop(e) {
-  console.log('xbox x: ', e.clientX - 330);
-  console.log('xbox y: ', e.clientY - 110);
+// function moveXboxAndEyesDesktop(e) {
+//   console.log('xbox x: ', e.clientX - 330);
+//   console.log('xbox y: ', e.clientY - 110);
 
-  xboxX = e.clientX - 330;
-  xboxY = e.clientY - 110;
+//   xboxX = e.clientX - 330;
+//   xboxY = e.clientY - 110;
 
-  if (xboxX >= 115) {
-    pupilsX = 3.5;
-  } else if (xboxX <= -3) {
-    pupilsX = -2.2;
-  } else {
-    pupilsX = 0;
-  }
+//   if (xboxX >= 115) {
+//     pupilsX = 3.5;
+//   } else if (xboxX <= -3) {
+//     pupilsX = -2.2;
+//   } else {
+//     pupilsX = 0;
+//   }
 
-  if (xboxY >= 210) {
-    pupilsY = 0.8;
-  } else if (xboxY <= 120) {
-    pupilsY = -4.8;
-  } else {
-    pupilsY = -1;
-  }
-}
+//   if (xboxY >= 210) {
+//     pupilsY = 0.8;
+//   } else if (xboxY <= 120) {
+//     pupilsY = -4.8;
+//   } else {
+//     pupilsY = -1;
+//   }
+// }
 
 function runLoop() {
   cx.clearRect(0, 0, canvas.width, canvas.height);
@@ -86,7 +86,7 @@ function runLoop() {
 function init() {
   canvas.addEventListener('touchstart', moveXboxAndEyesMobile);
   canvas.addEventListener('touchmove', moveXboxAndEyesMobile);
-  canvas.addEventListener('mousemove', moveXboxAndEyesDesktop);
+  // canvas.addEventListener('mousemove', moveXboxAndEyesDesktop);
   runLoop();
 }
 

@@ -1,3 +1,3 @@
 # following-eyes
 
-Works on mousemove or touchmove(mobile)
+ONLY WORKS ON TOUCHMOVE(MOBILE)
