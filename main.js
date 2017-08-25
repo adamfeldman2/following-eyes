@@ -23,7 +23,7 @@ const eyeWhites = new Image();
 eyeWhites.src = 'images/eye-whites@2x.png'
 
 function addStaticAssets(xboxX, xboxY, pupilsX, pupilsY) {
-  cx.fillRect(0, 0, canvas.width, canvas.height);
+  cx.drawImage(background, 0, 0, background.naturalWidth / 2, background.naturalHeight / 2);
   cx.drawImage(eyeWhites, 0, 0, eyeWhites.naturalWidth / 2, eyeWhites.naturalHeight / 2);
   cx.drawImage(pupils, pupilsX, pupilsY, pupils.naturalWidth / 2, pupils.naturalHeight / 2);
   cx.drawImage(kid, 0, 0, kid.naturalWidth/2, kid.naturalHeight/2);
