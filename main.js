@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas');
 const cx = canvas.getContext('2d');
 
-let xboxX = 0;
-let xboxY = 0;
+let xboxX = 60;
+let xboxY = 380;
 let pupilsX = 0;
 let pupilsY = -2;
 
