@@ -31,6 +31,7 @@ function addStaticAssets(xboxX, xboxY, pupilsX, pupilsY) {
 }
 
 function moveXboxAndEyesMobile(e) {
+  e.preventDefault();
   console.log('xbox x: ', e.touches[0].clientX - 140);
   console.log('xbox y: ', e.touches[0].clientY - 100);
   xboxX = e.touches[0].clientX - 123;
